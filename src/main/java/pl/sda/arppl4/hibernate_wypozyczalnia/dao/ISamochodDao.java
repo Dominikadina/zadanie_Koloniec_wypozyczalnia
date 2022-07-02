@@ -6,11 +6,13 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ISamochodDao {
-    public void dodajSamochod(Samochod samochod);
+    public void dodaj(Samochod samochod);
 
-//    public void usunSamochod(Samochod samochod);
+    public void update(Samochod samochod);
 
-    Optional <Samochod> zwrocSamochod(Long id);
+    public void usun(Samochod samochod);
+
+    Optional <Samochod> zwroc(Long id);
 
     List <Samochod> zwrocListeSamochodow();
 

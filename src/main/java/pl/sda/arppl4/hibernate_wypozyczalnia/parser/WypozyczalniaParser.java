@@ -1,6 +1,6 @@
 package pl.sda.arppl4.hibernate_wypozyczalnia.parser;
 
-import pl.sda.arppl4.hibernate_wypozyczalnia.dao.SamochodDao;
+import pl.sda.arppl4.hibernate_wypozyczalnia.dao.GenericDao;
 import pl.sda.arppl4.hibernate_wypozyczalnia.model.Samochod;
 import pl.sda.arppl4.hibernate_wypozyczalnia.model.TypNadwozia;
 
@@ -13,18 +13,18 @@ import java.util.Scanner;
 public class WypozyczalniaParser {
     private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
-    public WypozyczalniaParser(Scanner scanner, SamochodDao dao) {
+    private final Scanner scanner;
+    private final GenericDao<Samochod> dao;
+
+    public WypozyczalniaParser(Scanner scanner, GenericDao<Samochod> dao) {
         this.scanner = scanner;
         this.dao = dao;
     }
 
-    private final Scanner scanner;
-    private final SamochodDao dao;
-
     public void wykonaj() {
         String komenda;
         do {
-            System.out.println("Komenda");
+            System.out.println("Komenda: [dodaj, zwroc, lista, usun, update]");
             komenda = scanner.next();
             if (komenda.equalsIgnoreCase("dodaj")) {
                 handleAddCommand();
@@ -32,6 +32,10 @@ public class WypozyczalniaParser {
                 handleReturnCar();
             } else if (komenda.equalsIgnoreCase("lista")) {
                 handleListCommand();
+            } else if (komenda.equalsIgnoreCase("usun")) {
+                handleReturnCar();
+            } else if (komenda.equalsIgnoreCase("update")) {
+                handleUpdateCommand();
             }
 
         } while (!komenda.equals("wyjdz"));
@@ -52,27 +56,74 @@ public class WypozyczalniaParser {
         TypNadwozia typNadwozia = zaladujTypNadwozia();
 
         Samochod samochod = new Samochod(null, nazwa, model, dataWypozyczenia, iloscPasazerow, typNadwozia);
-        dao.dodajSamochod(samochod);
+        dao.dodaj(samochod);
     }
 
     private void handleListCommand() {
-        List<Samochod> SamochodLista = dao.zwrocListeSamochodow();
-        for (Samochod samochod : SamochodLista) {
+        List<Samochod> samochodLista = dao.list(Samochod.class);
+        for (Samochod samochod : samochodLista) {
             System.out.println(samochod);
         }
         System.out.println();
     }
-    private void handleReturnCar(){
+
+    private void handleReturnCar() {
         System.out.println("Podaj id samochodu");
         Long id = scanner.nextLong();
 
-        Optional<Samochod> samochodOptional = dao.zwrocSamochod(id);
-        if(samochodOptional.isPresent()) {
-            Samochod samochod = samochodOptional.get();
-            dao.usunSamochod(samochod);
-            System.out.println("Samochod usuniety");
-        }else{
+        Optional<Samochod> samochodOptional = dao.znajdzPoId(id, Samochod.class);
+        if (samochodOptional.isPresent()) {
+            System.out.println("Samochod: " + samochodOptional.get());
+        } else {
             System.out.println("Nie znaleziono samochodu");
+        }
+    }
+
+    private void handleUpdateCommand() {
+        System.out.println("Podaj id samochodu do aktualizacji:");
+        Long id = scanner.nextLong();
+
+        Optional<Samochod> samochodOptional = dao.zwroc(id);
+        if (samochodOptional.isPresent()) {
+        Samochod samochod = samochodOptional.get();
+
+        System.out.println("Co chciałbys uakttualnic? [nazwa, data wypozyczenia");
+        String output = scanner.next();
+        switch (output) {
+            case "nazwa":
+                System.out.println("Podaj nazwe:");
+                String nazwa = scanner.next();
+
+                samochod.setNazwa(nazwa);
+                break;
+            case "dataWypozyczenia":
+                LocalDate dataWypozyczenia = zaladujdateWypozczenia();
+
+                samochod.setDataWypozyczenia(dataWypozyczenia);
+                break;
+
+            default:
+                System.out.println("Field with this name is not handled.");
+        }
+
+        dao.aktualizuj(samochod);
+        System.out.println("Samochod zaktualizowano.");
+    } else {
+
+        System.out.println("Nie znaleziono samochodu");
+    }
+}
+    private void handleDeleteCommand() {
+        System.out.println("Provide id of the product");
+        Long id = scanner.nextLong();
+
+        Optional<Samochod> samochodOptional = dao.zwroc(id);
+        if (samochodOptional.isPresent()) {
+            Samochod samochod = samochodOptional.get();
+            dao.usun(samochod);
+            System.out.println("Samochod usuniety");
+        } else {
+            System.out.println("Samochod nie znaleziony");
         }
     }
     private LocalDate zaladujdateWypozczenia() {
