@@ -18,8 +18,8 @@ public class Samochod {
 
     private String nazwa;
     private String model;
-    private LocalDate data;
-    private int iloscPsazerow;
+    private LocalDate dataWypozyczenia;
+    private int iloscPasazerow;
     @Enumerated(EnumType.STRING)
     private TypNadwozia typNadwozia;
 }
