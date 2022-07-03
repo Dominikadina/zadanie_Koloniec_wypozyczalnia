@@ -59,7 +59,7 @@ public class WypozyczalniaParser {
         if (samochodOptional.isPresent()) {
             Samochod samochod = samochodOptional.get();
 
-            if (!sprawdzCzySamochodJestDostepny(samochod)) {
+            if (sprawdzCzySamochodJestDostepny(samochod)) {
                 System.out.println("Podaj imie");
                 String imie = scanner.next();
 
@@ -253,6 +253,6 @@ public class WypozyczalniaParser {
 
     private boolean sprawdzCzySamochodJestDostepny(Samochod samochod){
         Optional<Wypozyczalnia> optionalWypozyczalnia = znajdzAKtywnyWynajem(samochod);
-        return optionalWypozyczalnia.isPresent();
+        return !optionalWypozyczalnia.isPresent();
     }
 }

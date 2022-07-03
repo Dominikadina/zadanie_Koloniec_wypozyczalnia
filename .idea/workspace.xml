@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb8b2c8b-aeb5-45f3-9067-9cf5c410ab71" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/model/Wypozyczalnia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/GenericDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/ISamochodDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/SamochodDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/model/Samochod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/model/Samochod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/parser/WypozyczalniaParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/parser/WypozyczalniaParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +87,7 @@
       <workItem from="1656755400225" duration="15441000" />
       <workItem from="1656781200114" duration="2540000" />
       <workItem from="1656783776518" duration="125000" />
-      <workItem from="1656831081480" duration="12741000" />
+      <workItem from="1656831081480" duration="14117000" />
     </task>
     <servers />
   </component>
