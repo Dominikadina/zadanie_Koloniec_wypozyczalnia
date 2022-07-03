@@ -28,7 +28,7 @@ public class WypozyczalniaParser {
     public void wykonaj() {
         String komenda;
         do {
-            System.out.println("Komenda: [dodaj, zwroc, lista, usun, update, wyjanem]");
+            System.out.println("Komenda: [dodaj, znajdz, lista, usun, update, wyjanem, zwrocWYnajem, sprawdz]");
             komenda = scanner.next();
             if (komenda.equalsIgnoreCase("dodaj")) {
                 handleAddCommand();
