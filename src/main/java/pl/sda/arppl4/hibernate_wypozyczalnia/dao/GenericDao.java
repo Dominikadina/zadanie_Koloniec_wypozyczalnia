@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class GenericDao<T> implements ISamochodDao{
+public class GenericDao<T>{
         public void dodaj(T dodawanyObiekt) {
             SessionFactory fabrykaPolaczen = HibernateUtil.getSessionFactory();
 

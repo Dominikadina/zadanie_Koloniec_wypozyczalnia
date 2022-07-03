@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb8b2c8b-aeb5-45f3-9067-9cf5c410ab71" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/model/Wypozyczalnia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/GenericDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/GenericDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/ISamochodDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/ISamochodDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/SamochodDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/SamochodDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/ISamochodDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/dao/SamochodDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/model/Samochod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/model/Samochod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/parser/WypozyczalniaParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/sda/arppl4/hibernate_wypozyczalnia/parser/WypozyczalniaParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,16 +41,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Dom/IdeaProjects/arppl4_hibernate/arppl4_hibernate_wypozyczalnia/src/main/resources&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Dom/IdeaProjects/arppl4_hibernate/arppl4_hibernate_wypozyczalnia/src/main/resources",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.general"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Dom\IdeaProjects\arppl4_hibernate\arppl4_hibernate_wypozyczalnia\src\main\resources" />
@@ -87,6 +94,8 @@
       <workItem from="1656755355134" duration="15000" />
       <workItem from="1656755400225" duration="15441000" />
       <workItem from="1656781200114" duration="2540000" />
+      <workItem from="1656783776518" duration="125000" />
+      <workItem from="1656831081480" duration="12741000" />
     </task>
     <servers />
   </component>
